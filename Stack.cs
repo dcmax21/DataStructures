@@ -9,23 +9,23 @@ using System;
 using System.Collections.Generic;
 
 
-    public class UnderFlowException : Exception 
+    public class UndersFlowException : Exception 
     {
-        public UnderFlowException() { }
-        public UnderFlowException(string message) 
+        public UndersFlowException() { }
+        public UndersFlowException(string message) 
             : base(message) 
         {
         }
 
     }
 
-namespace Staks
+namespace stacks
 {   
-    class Stack
+    class Stacks
     {
         private string[] arr;
         private int top;
-        public Stack()
+        public Stacks()
         {
             arr = new string[5];
             top = 0; 
@@ -49,7 +49,7 @@ namespace Staks
         {    
             if (IsEmpty())
             {   
-                throw new UnderFlowException("underflow");
+                throw new UndersFlowException("underflow");
             }
             
             top--;
@@ -66,14 +66,17 @@ namespace Staks
             return false;
             
         }
-        public void Puts(string text)
-        {
-            Console.WriteLine(text);
-        }
+        // public void Print(string text)
+        // {
+        //     Console.WriteLine(text);
+        // }
     }
+
+
+
+
+   
 }
-
-
 
 
 
